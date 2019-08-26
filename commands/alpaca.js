@@ -5,7 +5,7 @@ const fetch = require('node-fetch');
 module.exports = { 
     config: {
         name: "alpaca",
-        description: "sends a picture of a alpaca!",
+        description: "Uma imagem aleatoria de Alpaca!",
         usage: "",
         category: "images",
         accessableby: "Members",
@@ -16,7 +16,7 @@ module.exports = {
 
         fetch("https://apis.duncte123.me/alpaca")
         .then(res => res.json()).then(body => {
-            if(!body) return message.reply(" whoops. I broke, try again!")
+            if(!body) return message.reply(" whoops. Esta quebrado")
 
             let embed = new RichEmbed()
             .setColor(cyan)

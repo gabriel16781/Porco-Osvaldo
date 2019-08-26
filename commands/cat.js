@@ -5,7 +5,7 @@ const superagent = require("superagent")
 
 
 module.exports.run = async (bot, message, args) => {
-    let msg = await message.channel.send("Generating...")
+    let msg = await message.channel.send("Gerando...")
 
     let {body} = await superagent
     .get(`http://aws.random.cat/meow`)
@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.config = {
     name: "cat",
-    description: "sends a picture of a cat!",
+    description: "imagem aleatoria de gatos!",
     usage: "!cat",
     accessableby: "Members",
     aliases: ["catto", "CAT"]

@@ -5,12 +5,12 @@ const superagent = require("superagent")
 
 
 module.exports.run = async (bot, message, args) => {
-    let msg = await message.channel.send("Generating...")
+    let msg = await message.channel.send("Gerando...")
 
     let {body} = await superagent
     .get(`https://dog.ceo/api/breeds/image/random`)
     //console.log(body.file)
-    if(!{body}) return message.channel.send("I broke! Try again.")
+    if(!{body}) return message.channel.send("Esta quebrado! Fale para o Dono.")
 
         let dEmbed = new Discord.RichEmbed()
         .setColor(colours.cyan)
@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.config = {
     name: "dog",
-    description: "Sends a picture of a dog!",
+    description: "Uma imagem aleatoria !",
     usage: "!dog",
     accessableby: "Members",
     aliases: ["doggo", "puppy", "DOG"]
