@@ -42,7 +42,7 @@ module.exports.run = async (bot, message, args) => {
 
 
 module.exports.config = {
-    name: "help",
+    name: "info",
     aliases: ["h", "halp", "commands"],
     usage: "!usage",
     description: "",

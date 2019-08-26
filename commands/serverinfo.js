@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("**Nome Servidor:**", `${message.guild.name}`, true)
     .addField("**Dono Corno:**", `${message.guild.owner}`, true)
     .addField("**Quantidade De Cornos:**", `${message.guild.memberCount}`, true)
-    .addField("**Cargos:**", `${message.guild.roles.size}`, true)
+    .addField("**Cargos:**", `${message.guild.size}`, true)
     .setFooter(`Porco Osvaldo | Lindo`, bot.user.displayAvatarURL);
     message.channel.send({embed: sEmbed});
 }
