@@ -1,26 +1,26 @@
 const { RichEmbed } = require("discord.js")
-const { cyan } = require("../colours.json");
+const { cyan } = require("../../colours.json");
 const fetch = require('node-fetch');
 
 module.exports = { 
     config: {
-        name: "ilama",
-        description: "Mostramos uma imagem aleatoria de uma ilama!",
+        name: "alpaca",
+        description: "Uma imagem aleatoria de Alpaca!",
         usage: "",
         category: "images",
         accessableby: "Members",
-        aliases: ["ilhama", "ILAMA"]
+        aliases: ["alpa", "ALPACA"]
     },
     run: async (bot, message, args) => {
         let msg = await message.channel.send("Gerando...")
 
-        fetch("https://apis.duncte123.me/llama")
+        fetch("https://apis.duncte123.me/alpaca")
         .then(res => res.json()).then(body => {
-            if(!body) return message.reply(" whoops.Parece que não esta funcinando !")
+            if(!body) return message.reply(" whoops. Esta quebrado")
 
             let embed = new RichEmbed()
             .setColor(cyan)
-            .setAuthor(`${bot.user.username} Ilama!`, message.guild.iconURL)
+            .setAuthor(`${bot.user.username} Alpaca!`, message.guild.iconURL)
             .setImage(body.data.file)
             .setTimestamp()
             .setFooter(bot.user.username.toUpperCase(), bot.user.displayAvatarURL)
