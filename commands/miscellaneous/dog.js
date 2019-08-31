@@ -13,7 +13,7 @@ module.exports = {
         aliases: ["doggo", "puppy"]
     },
     run: async (bot, message, args) => {
-    let msg = await message.channel.send("Generating...")
+    let msg = await message.channel.send("Gerando...")
 
     fetch(`https://dog.ceo/api/breeds/image/random`)
     .then(res => res.json()).then(body => {
@@ -21,7 +21,7 @@ module.exports = {
 
         let dEmbed = new RichEmbed()
         .setColor(cyan)
-        .setAuthor(`${bot.user.username} DOGS!`, message.guild.iconURL)
+        .setAuthor(`${bot.user.username} CACHORROS!`, message.guild.iconURL)
         .setImage(body.message)
         .setTimestamp()
         .setFooter(bot.user.username.toUpperCase(), bot.user.displayAvatarURL)

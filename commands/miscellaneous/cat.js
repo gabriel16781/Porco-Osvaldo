@@ -12,7 +12,7 @@ module.exports = {
         aliases: ["catto"]
     },
     run: async (bot, message, args) => {
-    let msg = await message.channel.send("Generating...")
+    let msg = await message.channel.send("Gerando...")
 
     fetch(`http://aws.random.cat/meow`)
     .then(res => res.json()).then(body => {
@@ -20,7 +20,7 @@ module.exports = {
 
         let cEmbed = new RichEmbed()
         .setColor(cyan)
-        .setAuthor(`${bot.user.username} CATS!`, message.guild.iconURL)
+        .setAuthor(`${bot.user.username} GATOS!`, message.guild.iconURL)
         .setImage(body.file)
         .setTimestamp()
         .setFooter(bot.user.username.toUpperCase(), bot.user.displayAvatarURL)
