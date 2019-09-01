@@ -13,15 +13,15 @@ module.exports = {
     run: async (bot, message, args) => {
     let uEmbed = new RichEmbed()
         .setColor(red_light)
-        .setTitle("User Info")
+        .setTitle("IUser info")
         .setThumbnail(message.guild.iconURL)
         .setAuthor(`${message.author.username} Info`, message.author.displayAvatarURL)
-        .addField("**Username:**", `${message.author.username}`, true)
+        .addField("**Usuario:**", `${message.author.username}`, true)
         .addField("**Discriminator:**", `${message.author.discriminator}`, true)
         .addField("**ID:**", `${message.author.id}`, true)
         .addField("**Status:**", `${message.author.presence.status}`, true)
-        .addField("**Created At:**", `${message.author.createdAt}`, true)
-        .setFooter(`TestBot | Footer`, bot.user.displayAvatarURL);
+        .addField("**Registrado em:**", `${message.author.createdAt}`, true)
+        .setFooter(`PorcoOsvaldo | Lindo`, bot.user.displayAvatarURL);
 
     message.channel.send(uEmbed);
     }

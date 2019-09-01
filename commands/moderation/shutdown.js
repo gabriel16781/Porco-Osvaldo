@@ -9,10 +9,10 @@ module.exports = {
     },
     run: async (bot, message, args) => {
 
-    if(message.author.id != "203104843479515136") return message.channel.send("You're the bot the owner!")
+    if(message.author.id != "243106336416595978") return message.channel.send("Você não é o Dono!")
 
     try {
-        await message.channel.send("Bot is shutting down...")
+        await message.channel.send("Bot Esta desligando flw...")
         process.exit()
     } catch(e) {
         message.channel.send(`ERROR: ${e.message}`)

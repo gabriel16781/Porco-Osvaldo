@@ -4,7 +4,7 @@ module.exports = async bot => {
 
     let statuses = [
         `${bot.guilds.size} servers!`,
-        "!help",
+        "$help",
         `over ${bot.users.size} users!`
     ]
 

@@ -10,10 +10,10 @@ module.exports = {
 
     message.channel.send("Pinging...").then(m => {
         let ping = m.createdTimestamp - message.createdTimestamp
-        let choices = ["Is this really my ping", "Is it okay? I cant look", "I hope it isnt bad"]
+        let choices = [" Este é realmente o meu ping "," Está tudo bem? Não consigo olhar "," espero que não seja ruim"]
         let response = choices[Math.floor(Math.random() * choices.length)]
 
-        m.edit(`${response}: Bot Latency: \`${ping}\`, API Latency: \`${Math.round(bot.ping)}\``)
+        m.edit(`${response}: Bot Latencia: \`${ping}\`, API Latencia: \`${Math.round(bot.ping)}\``)
     })
   }
 }

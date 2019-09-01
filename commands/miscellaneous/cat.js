@@ -12,7 +12,7 @@ module.exports = {
         aliases: ["catto"]
     },
     run: async (bot, message, args) => {
-    let msg = await message.channel.send("Gerando...")
+    let msg = await message.channel.send("Gerando....")
 
     fetch(`http://aws.random.cat/meow`)
     .then(res => res.json()).then(body => {

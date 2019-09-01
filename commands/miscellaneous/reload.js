@@ -9,22 +9,22 @@ module.exports = {
     },
     run: async (bot, message, args) => {
 
-    if(message.author.id != "203104843479515136") return message.channel.send("You're the bot the owner!")
+    if(message.author.id != "243106336416595978") return message.channel.send("Você não é o dono vaza rsrs!!!")
 
-    if(!args[0]) return message.channel.send("Please provide a command to reload!")
+    if(!args[0]) return message.channel.send("Forneça um comando para recarregar!")
 
     let commandName = args[0].toLowerCase()
 
     try {
-        delete require.cache[require.resolve(`./${commandName}.js`)] // usage !reload <name>
+        delete require.cache[require.resolve(`./${commandName}.js`)] // use $reload <name>
         bot.commands.delete(commandName)
         const pull = require(`./${commandName}.js`)
         bot.commands.set(commandName, pull)
     } catch(e) {
-        return message.channel.send(`Could not reload: \`${args[0].toUpperCase()}\``)
+        return message.channel.send(`Não foi possível recarregar: \`${args[0].toUpperCase()}\``)
     }
 
-    message.channel.send(`The command \`${args[0].toUpperCase()}\` has been reloaded!`)
+    message.channel.send(`O Comando \`${args[0].toUpperCase()}\` foi recarregado!`)
 
     }
 }

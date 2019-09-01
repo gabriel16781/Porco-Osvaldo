@@ -22,8 +22,9 @@ module.exports = {
         if(!args[0]) {
             const categories = readdirSync("./commands/")
 
-            embed.setDescription(`These are the avaliable commands for ${message.guild.me.displayName}\nThe bot prefix is: **${prefix}**`)
-            embed.setFooter(`© ${message.guild.me.displayName} | Total Commands: ${bot.commands.size}`, bot.user.displayAvatarURL);
+            embed.setDescription(`
+            Estes são os comandos disponíveis para ${message.guild.me.displayName}\nO prefixo do bot é: **${prefix}**`)
+            embed.setFooter(`© ${message.guild.me.displayName} | Total Comandos: ${bot.commands.size}`, bot.user.displayAvatarURL);
 
             categories.forEach(category => {
                 const dir = bot.commands.filter(c => c.config.category === category)

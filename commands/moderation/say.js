@@ -9,7 +9,7 @@ module.exports = {
     },
     run: async (bot, message, args) => {
 
-    if(!message.member.hasPermission(["MANAGE_MESSAGES", "ADMINISTRATOR"])) return message.channel.send("You can not use this command!")
+    if(!message.member.hasPermission(["MANAGE_MESSAGES", "ADMINISTRATOR"])) return message.channel.send("Voce Não possue permissão !")
     
     let argsresult;
     let mChannel = message.mentions.channels.first()

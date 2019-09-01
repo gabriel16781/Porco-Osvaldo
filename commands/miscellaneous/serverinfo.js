@@ -16,11 +16,11 @@ module.exports = {
         .setTitle("Server Info")
         .setThumbnail(message.guild.iconURL)
         .setAuthor(`${message.guild.name} Info`, message.guild.iconURL)
-        .addField("**Guild Name:**", `${message.guild.name}`, true)
-        .addField("**Guild Owner:**", `${message.guild.owner}`, true)
-        .addField("**Member Count:**", `${message.guild.memberCount}`, true)
-        .addField("**Role Count:**", `${message.guild.roles.size}`, true)
-        .setFooter(`TestBot | Footer`, bot.user.displayAvatarURL);
+        .addField("**Server Nome:**", `${message.guild.name}`, true)
+        .addField("**Dono Corno:**", `${message.guild.owner}`, true)
+        .addField("**Quantidade De Cornos:**", `${message.guild.memberCount}`, true)
+        .addField("**Cargos:**", `${message.guild.roles.size}`, true)
+        .setFooter(`PorcoOsvaldo | Lindo`, bot.user.displayAvatarURL);
     message.channel.send(sEmbed);
     }
 }
