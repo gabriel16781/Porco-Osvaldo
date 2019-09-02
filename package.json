@@ -9,6 +9,7 @@
   "author": "Gordo",
   "license": "ISC",
   "dependencies": {
+    "add": "^2.0.6",
     "common-tags": "^1.8.0",
     "dateformat": "^3.0.3",
     "discord.js": "^11.4.2",
@@ -18,7 +19,9 @@
     "fs": "0.0.1-security",
     "node-fetch": "^2.6.0",
     "node-fetch-npm": "^2.0.2",
+    "rich-embed": "^1.1.3",
     "superagent": "^5.1.0",
-    "util": "^0.12.1"
+    "util": "^0.12.1",
+    "yarn": "^1.17.3"
   }
 }

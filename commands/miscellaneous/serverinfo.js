@@ -18,7 +18,7 @@ module.exports = {
         .setAuthor(`${message.guild.name} Info`, message.guild.iconURL)
         .addField("**Server Nome:**", `${message.guild.name}`, true)
         .addField("**Dono Corno:**", `${message.guild.owner}`, true)
-        .addField("**Quantidade De Cornos:**", `${message.guild.memberCount}`, true)
+        .addField("**Quantidade De Cornos:**", `${message.guild.members.size}`, true)
         .addField("**Cargos:**", `${message.guild.roles.size}`, true)
         .setFooter(`PorcoOsvaldo | Lindo`, bot.user.displayAvatarURL);
     message.channel.send(sEmbed);

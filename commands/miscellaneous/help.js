@@ -23,9 +23,10 @@ module.exports = {
             const categories = readdirSync("./commands/")
 
             embed.setDescription(`
-            Estes são os comandos disponíveis para ${message.guild.me.displayName}\nO prefixo do bot é: **${prefix}**`)
+            Estes são os comandos disponíveis para ${message.guild.me.displayName}\nO prefixo do bot é: **${prefix}**\n
+            **Servers:**\t ${bot.guilds.size}\n **Usuarios:** \t${bot.users.size}`)
             embed.setFooter(`© ${message.guild.me.displayName} | Total Comandos: ${bot.commands.size}`, bot.user.displayAvatarURL);
-
+            
             categories.forEach(category => {
                 const dir = bot.commands.filter(c => c.config.category === category)
                 const capitalise = category.slice(0, 1).toUpperCase() + category.slice(1)
@@ -35,6 +36,7 @@ module.exports = {
                     console.log(e)
                 }
             })
+     
 
             return message.channel.send(embed)
         } else {
@@ -47,7 +49,9 @@ module.exports = {
             **Description:** ${command.description || "No Description provided."}
             **Usage:** ${command.usage ? `\`${prefix}${command.name} ${command.usage}\`` : "No Usage"}
             **Accessible by:** ${command.accessableby || "Members"}
-            **Aliases:** ${command.aliases ? command.aliases.join(", ") : "None."}`)
+            **Aliases:** ${command.aliases ? command.aliases.join(", ") : "None."}`
+            )
+            
 
             return message.channel.send(embed)
         }
